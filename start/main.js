@@ -8,7 +8,7 @@ form.addEventListener("submit", (e) => {
     if (age < 7) {
         const url = `../young`;
         window.location.href = url;
-    } else if (age >= 7 && age <= 100) {
+    } else if (age >= 5 && age <= 122) {
         const url = `../second/index.html?${data.toString()}`;
         window.location.href = url;
     } else {
