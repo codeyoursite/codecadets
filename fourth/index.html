@@ -13,36 +13,36 @@
     <p class="display-6">Please selct an option below (you can only choose 1 option).</p>
     <br>
     <form id="form">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio1" value="1">
-            <label class="form-check-label" for="radio1">
-              Scratch
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio2" value="2">
-            <label class="form-check-label" for="radio2">
-              Python
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio3" value="3">
-            <label class="form-check-label" for="radio3">
-              HTML
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio4" value="4">
-            <label class="form-check-label" for="radio4">
-              Data Science
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio5"  value="5">
-            <label class="form-check-label" for="radio5">
-              JavaScript
-            </label>
-          </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radio" id="radio1" value="1">
+        <label class="form-check-label" for="radio1" data-bs-toggle="popover" data-bs-title="What's Scratch?" data-bs-content="A beginner friendly graphical based block coding language.">
+          Scratch
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radio" id="radio2" value="2">
+        <label class="form-check-label" for="radio2"  data-bs-toggle="popover" data-bs-title="What's Python?" data-bs-content="A all purpose coding language bused fo everything from game development to data science.">
+          Python
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radio" id="radio3" value="3">
+        <label class="form-check-label" for="radio3"  data-bs-toggle="popover" data-bs-title="What's HTML?" data-bs-content="A frotend web-design language for building websites.">
+          HTML
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radio" id="radio4"  value="4">
+        <label class="form-check-label" for="radio4"  data-bs-toggle="popover" data-bs-title="What's Data Science?" data-bs-content="Learn to analyse and understand data.">
+          Data Science
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radio" id="radio5"  value="5">
+        <label class="form-check-label" for="radio5"  data-bs-toggle="popover" data-bs-title="What's JavaScript?" data-bs-content="A multi purpose language used to make web pages more dynamic.">
+          JavaScript
+        </label>
+      </div>
         <br>
         <input type="submit" value="Next" class="btn btn-primary">
         <div style="bottom: 25px !important; height: 20px !important; position: fixed !important; font-size: 25px;">
@@ -51,5 +51,13 @@
     </form>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+          var popoverList = [...popoverTriggerList].map(function (popoverTriggerEl) {
+              return new bootstrap.Popover(popoverTriggerEl);
+          });
+      });
+    </script>
 </body>
 </html>

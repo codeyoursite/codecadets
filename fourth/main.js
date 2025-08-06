@@ -1,5 +1,4 @@
 const form = document.getElementById("form");
-
 const receive = new URLSearchParams(window.location.search);
 const age = receive.get("age");
 const level = receive.get("level");
