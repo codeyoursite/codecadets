@@ -17,7 +17,8 @@ let dict = {
     "Python": {url: "https://code-cadets.getlearnworlds.com/course/pythonpickmix", img: "https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/45c9816f36663b4746af22c1e318fd12.png", path: "Software Developer 3", purl: "https://code-cadets.getlearnworlds.com/coursesc"},
     "Data Science": {url: "https://code-cadets.getlearnworlds.com/course/agentbriefing", img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/e1ca2d31edac59cede18a980165336a3.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0", path: "Software Developer 3", purl: "https://code-cadets.getlearnworlds.com/coursesc"},
     "Advanced Web Development": {url: "https://code-cadets.getlearnworlds.com/course/gameproject", img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/029dfbd802e55487542efedffdfb2987.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0'", path: "Software Developer 3", purl: "https://code-cadets.getlearnworlds.com/coursesc"},
-    "Advanced Web Development and Data Science": {img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/029dfbd802e55487542efedffdfb2987.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0'", path: "Software Developer 3", purl: "https://code-cadets.getlearnworlds.com/coursesc"}
+    "Advanced Web Development and Data Science": {img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/029dfbd802e55487542efedffdfb2987.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0'", path: "Software Developer 3", purl: "https://code-cadets.getlearnworlds.com/coursesc"},
+    "Minecraft": {url: "https://code-cadets.getlearnworlds.com/course/adventurer", img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/8a8cab9c341b5e2594e746bb089881b5.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0", path: "Software Developer 1", purl: "https://code-cadets.getlearnworlds.com/coursesa"},
 };
 
 if (age >= 7 && age <= 9) {
@@ -27,8 +28,14 @@ if (age >= 7 && age <= 9) {
 }
 
 if (level === "1") {
+    if (age >= 10) {
+        change("Minecraft");
+    }
     points++;
 } else if (level === "2") {
+    if (age >= 12) {
+        change("Minecraft");
+    }
     points += 2;
 } else if (level === "3") {
     points += 3;
@@ -41,7 +48,7 @@ const img = document.getElementById("img");
 const a = document.getElementById("link");
 let o = undefined;
 
-if (points == 3) {
+if (points <= 3) {
     change("Block Coding");
 } else if (points == 4) {
     if (level !== "1") {
