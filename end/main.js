@@ -1,11 +1,8 @@
 const receive = new URLSearchParams(window.location.search);
-const age = receive.get("age");
-const level = receive.get("level");
-let radio = undefined;
-if (level !== "1") {
-    radio = receive.get("radio");
-}
-const choice = receive.get("choice");
+const age = receive.get("age");//1
+const level = receive.get("level");//2
+radio = receive.get("radio");//3
+const choice = receive.get("choice");//4
 let points = 0;
 
 let dict = {
@@ -56,15 +53,27 @@ let dict = {
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/029dfbd802e55487542efedffdfb2987.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 3",
         purl: "https://code-cadets.getlearnworlds.com/coursesc"
+    },
+    "Godot Game Engine": {
+        url: "https://code-cadets.getlearnworlds.com/course/godot1",
+        img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/bb59bddc5921f0b50d8f85f6d2cff530.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
+        path: "Software Developer 3",
+        purl: "https://code-cadets.getlearnworlds.com/coursesc"
     }
 };
 
-if (age >= 7 && age <= 9) {
+// if you are young - point are 2, older gets 3
+if (age <= 9) {
     points = 2;
 } else {
     points = 3;
 }
 
+// level is the 2nd q
+// if you are not good - only one more point
+// if you are okay - two more points
+//if you are prty good - three more points
+//if you are OG like me - four more points
 if (level === "1") {
     points++;
 } else if (level === "2") {
@@ -75,65 +84,61 @@ if (level === "1") {
     points += 4;
 }
 
-const txt = document.getElementById("txt");
-const img = document.getElementById("img");
-const a = document.getElementById("link");
-let o = undefined;
+const txt = document.getElementById("txt"); //Where info with links is placed
+const img = document.getElementById("img");// Where the img is placed
+const a = document.getElementById("link");// Where link is placed
+let o = undefined; // first bit of info about subject is placed
 
 if (points == 3) {
-    change("Block Coding");
-} else if (points == 4) {
-    if (level !== "1") {
-        if (radio === "1") {
-            change("Makecode Arcade");
-        } else {
-            change("Scratch");
-        }
+    if (age > 10) {
+        change("Minecraft") // if they are old but dont know how to code, minecraft suits them
     } else {
-        change("Scratch");
+        change("Block Coding"); // if they are the lowest on all of them, they do block coding
+    }
+} else if (points == 4) {
+    if (radio === "1") {// radio is the what they have done before
+        change("Makecode Arcade"); // level up now, if they are older, or okay at coding and they didn't want to do scratch, they do arcade
+    } else {
+        change("Scratch");// if they have scratch, they do scratch
     }
 } else if (points == 5) {
-    if (level !== "1") {
-        if (radio === "3" && radio !== "5") {
-            change("JavaScript");
-        } else {
+    if (level !== "1" && level !== "2") { // if they are great at coding
+        if (radio === "5") { // they have chose html and not js (they have already done it)
             change("HTML");
+        } else {
+            change("JavaScript");
         }
     } else {
-        change("HTML");
+        if (radio !== 3) { // if they didn't choose HTML
+            change("HTML");
+        } else {
+            change("Python");
+        }
     }
 } else if (points == 6) {
-    if (level !== "1") {
-        if (radio === "2" && radio !== "5") {
+    if (level !== "1" && level !== "2") { // if they are a good coder
+        if (radio === "2") { // if they have already did Python
             change("JavaScript");
         } else {
             change("Python");
         }
-    } else {
-        change("Python");
-    }
-} else {
-    if (level !== "1") {
-        if (radio === "5" || radio === "3") {
-            change("Data Science");
+    } else { // if they are not a good coder
+        if (radio !== "3") { // if they didn't already do HTML
+            change("HTML");
         } else {
-            if (choice === "4") {
-                change("Data Science");
-            } else if (choice === "3" || choice === "5") {
-                change("Advanced Web Development");
-            } else {
-                o = "The AI has chosen Advanced Web Development and Data Science for you.";
-                txt.innerHTML = o + "<br>" + `Click <a href="https://code-cadets.getlearnworlds.com/course/agentbriefing">here</a> for Adavanced Web Development and <a href="https://code-cadets.getlearnworlds.com/course/space-invaders">here</a> for Data Science in <a href="https://code-cadets.getlearnworlds.com/coursesc">Software Developer C</a>.`;
-            }
+            change("Python");
         }
-    } else {
-        if (choice === "4") {
+    }
+} else { // if they are a very very good coder and scored ridicoulously highly
+    if (radio === "5" || radio === "3") { // if they chose HTML or Javascript
+        change("Data Science");
+    } else { // if they have already done something else that wasn't HTML or JavaScript
+        if (choice === "4") { // if they wanted to do Data Science
             change("Data Science");
-        } else if (choice === "3" || choice === "5") {
+        } else if (choice === "3" || choice === "5") { // if they chose HTML or JavaScript in the choice (I want to do this...)
             change("Advanced Web Development");
-        } else {
-            o = "The AI has chosen Advanced Web Development and Data Science for you.";
-            txt.innerHTML = o + "<br>" + `Click <a href="https://code-cadets.getlearnworlds.com/course/agentbriefing">here</a> for Adavanced Web Development and <a href="https://code-cadets.getlearnworlds.com/course/space-invaders">here</a> for Data Science in <a href="https://code-cadets.getlearnworlds.com/coursesc">Software Developer C</a>.`;
+        } else { // if they did something else entirely
+            change("Godot Game Engine")
         }
     }
 }
