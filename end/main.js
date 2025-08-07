@@ -10,61 +10,71 @@ let dict = {
         url: "https://code-cadets.getlearnworlds.com/course/space-invaders",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/4d2eb929c413e767e3a14e01a211d5a2.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 1",
-        purl: "https://code-cadets.getlearnworlds.com/coursesa"
+        purl: "https://code-cadets.getlearnworlds.com/coursesa",
+        desc: "Code the classic space invaders game in 3D, while learning about the basic of game development, motion in 3D space and learn fundamental programming concepts like loops, conditionals, variables, and keyboard events, all in less than an hour."
     },
     "Scratch": {
         url: "https://code-cadets.getlearnworlds.com/course/scratchbasics1",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/aeccbe7a98a3df008eb4624fcc32097c.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 2",
-        purl: "https://code-cadets.getlearnworlds.com/coursesb"
+        purl: "https://code-cadets.getlearnworlds.com/coursesb",
+        desc: "Learn all the basics of Scratch with this introductory block coding course. Impress your friends with your basic Scratch knowledge. Learn about sequence, selection and repetition."
     },
     "Minecraft": {
         url: "https://code-cadets.getlearnworlds.com/course/adventurer",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/8a8cab9c341b5e2594e746bb089881b5.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 1",
-        purl: "https://code-cadets.getlearnworlds.com/coursesa"
+        purl: "https://code-cadets.getlearnworlds.com/coursesa",
+        desc: "Learn to code with Alex or Steve. Move through a simulated piece of a Minecraft world."
     },
     "Makecode Arcade": {
         url: "https://code-cadets.getlearnworlds.com/course/arcade",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/2dc429e9154f51119eaae6f469124185.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 2",
-        purl: "https://code-cadets.getlearnworlds.com/coursesb"
+        purl: "https://code-cadets.getlearnworlds.com/coursesb",
+        desc: "Code your own classroom carnival with games like Whack-the-Mole, Burstin' Balloons, and Target Practice. Learn to use repeat blocks and conditionals (IF statements)."
     },
     "JavaScript": {
         url: "https://code-cadets.getlearnworlds.com/course/gamerplatform",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/92a9dfdc6140e59c02d6ef4f77a11532.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 3",
-        purl: "https://code-cadets.getlearnworlds.com/coursesc"
+        purl: "https://code-cadets.getlearnworlds.com/coursesc",
+        desc: "Build your own Super-Mario-style game in just 22 minutes using this amazing tutorial. Powered by Kaboom.js ( a simplified version of Javascript) you'll write functions and add sprites within the first lesson."
     },
     "HTML": {
         url: "https://code-cadets.getlearnworlds.com/course/website",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/a3cb90926e19afbcccb7e90f2d317570.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 2",
-        purl: "https://code-cadets.getlearnworlds.com/coursesb"
+        purl: "https://code-cadets.getlearnworlds.com/coursesb",
+        desc: "Become a pro web designer by making your own website using HTML, CSS and JavaScript."
     },
     "Python": {
         url: "https://code-cadets.getlearnworlds.com/course/pythonpickmix",
         img: "https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/45c9816f36663b4746af22c1e318fd12.png",
         path: "Software Developer 3",
-        purl: "https://code-cadets.getlearnworlds.com/coursesc"
+        purl: "https://code-cadets.getlearnworlds.com/coursesc",
+        desc: "Bite-sized coding activities for beginners. These activities offer a quick insight into the basics of coding in Python. Enjoy!"
     },
     "Data Science": {
         url: "https://code-cadets.getlearnworlds.com/course/agentbriefing",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/e1ca2d31edac59cede18a980165336a3.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 3",
-        purl: "https://code-cadets.getlearnworlds.com/coursesc"
+        purl: "https://code-cadets.getlearnworlds.com/coursesc",
+        desc: "Join the DATA Agency (Defence Against Temporal Attacks) as a trainee agent to help stop the League of VIKINGS—a group of cyber villains causing chaos across the internet and timeline. Working as a team from your classroom “DATA base,” you'll solve puzzles and decode information to protect the UK from digital and time-based threats."
     },
     "Advanced Web Development": {
         url: "https://code-cadets.getlearnworlds.com/course/gameproject",
-        img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/029dfbd802e55487542efedffdfb2987.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
+        img: "https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/6525ed475cfe1aded1f555b02b2366e9.png",
         path: "Software Developer 3",
-        purl: "https://code-cadets.getlearnworlds.com/coursesc"
+        purl: "https://code-cadets.getlearnworlds.com/coursesc",
+        desc: "You will plan, design, and develop your own game, animation, or website using Scratch, Python, JavaScript, HTML, or a game engine. Complete the online form to outline your project idea. Your project must be challenging enough to earn your badge—check with your tutor to make sure you're on track."
     },
     "Godot Game Engine": {
         url: "https://code-cadets.getlearnworlds.com/course/godot1",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/bb59bddc5921f0b50d8f85f6d2cff530.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
         path: "Software Developer 3",
-        purl: "https://code-cadets.getlearnworlds.com/coursesc"
+        purl: "https://code-cadets.getlearnworlds.com/coursesc",
+        desc: "Learn game development using the beginner-friendly Godot Engine. You'll explore scenes, nodes, and scripting with GDScript. You’ll create interactive characters, animations, sound, physics, and user interfaces. By the end, you’ll have built several small games and gained a solid foundation to develop your own original game ideas."
     }
 };
 
@@ -93,6 +103,8 @@ if (level === "1") {
 const txt = document.getElementById("txt"); //Where info with links is placed
 const img = document.getElementById("img");// Where the img is placed
 const a = document.getElementById("link");// Where link is placed
+const title = document.getElementById("title");// Where title is placed
+const cdesc = document.getElementById("cdesc");// Where course description is placed
 let o = undefined; // first bit of info about subject is placed
 
 if (points == 3) {
@@ -153,6 +165,8 @@ function change(act) {
         txt.innerHTML = o + "<br>" + `Click <a href="${url}">here</a> for a link to the site or select any activity in <a href="${dict[act].purl}">${dict[act].path}</a>`;
         img.src = dict[act].img;
         a.href = dict[act].url;
+        title.innerHTML = act;
+        cdesc.innerHTML = dict[act].desc;
         const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
