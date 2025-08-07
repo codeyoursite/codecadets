@@ -18,6 +18,12 @@ let dict = {
         path: "Software Developer 2",
         purl: "https://code-cadets.getlearnworlds.com/coursesb"
     },
+    "Minecraft": {
+        url: "https://code-cadets.getlearnworlds.com/course/adventurer",
+        img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/8a8cab9c341b5e2594e746bb089881b5.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
+        path: "Software Developer 1",
+        purl: "https://code-cadets.getlearnworlds.com/coursesa"
+    },
     "Makecode Arcade": {
         url: "https://code-cadets.getlearnworlds.com/course/arcade",
         img: "https://api.us-e2.learnworlds.com/imagefile/https://lwfiles.mycourse.app/64da7ae07ffc46ecefdad7ed-public/2dc429e9154f51119eaae6f469124185.png?client_id=64da7ae07ffc46ecefdad7ed&width=400&height=0",
@@ -90,16 +96,13 @@ const a = document.getElementById("link");// Where link is placed
 let o = undefined; // first bit of info about subject is placed
 
 if (points == 3) {
+    change("Block Coding"); // if they are the lowest on all of them, they do block coding
+} else if (points == 4) {
     if (age > 10) {
+        console.log("Minecraft");
         change("Minecraft") // if they are old but dont know how to code, minecraft suits them
     } else {
-        change("Block Coding"); // if they are the lowest on all of them, they do block coding
-    }
-} else if (points == 4) {
-    if (radio === "1") {// radio is the what they have done before
-        change("Makecode Arcade"); // level up now, if they are older, or okay at coding and they didn't want to do scratch, they do arcade
-    } else {
-        change("Scratch");// if they have scratch, they do scratch
+        change("Scratch");// if they are young, they do scratch
     }
 } else if (points == 5) {
     if (level !== "1" && level !== "2") { // if they are great at coding
@@ -146,7 +149,7 @@ if (points == 3) {
 function change(act) {
     o = `The AI has chosen ${act} for you.`;
     let url = dict[act].url;
-    txt.innerHTML = o + "<br>" + `Click <a href="${url}">here</a> for a link to the site or selct any activity in <a href="${dict[act].purl}">${dict[act].path}</a>`;
+    txt.innerHTML = o + "<br>" + `Click <a href="${url}">here</a> for a link to the site or select any activity in <a href="${dict[act].purl}">${dict[act].path}</a>`;
     img.src = dict[act].img;
     a.href = dict[act].url;
 }
