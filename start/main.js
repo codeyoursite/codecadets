@@ -5,10 +5,10 @@ form.addEventListener("submit", (e) => {
     const age = document.getElementById("floatingPassword").value;
     let data = new URLSearchParams();
     data.append("age", age);
-    if (age < 7) {
+    if ((age <= 7) && (age >= 4)) {
         const url = `../young`;
         window.location.href = url;
-    } else if (age >= 5 && age <= 18) {
+    } else if (age > 7 && age < 18) {
         const url = `../second/index.html?${data.toString()}`;
         window.location.href = url;
     } else {
