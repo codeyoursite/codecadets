@@ -147,11 +147,44 @@ if (points == 3) {
 }
 
 function change(act) {
-    o = `The AI has chosen ${act} for you.`;
-    let url = dict[act].url;
-    txt.innerHTML = o + "<br>" + `Click <a href="${url}">here</a> for a link to the site or select any activity in <a href="${dict[act].purl}">${dict[act].path}</a>`;
-    img.src = dict[act].img;
-    a.href = dict[act].url;
+    try {
+        o = `The AI has chosen ${act} for you.`;
+        let url = dict[act].url;
+        txt.innerHTML = o + "<br>" + `Click <a href="${url}">here</a> for a link to the site or select any activity in <a href="${dict[act].purl}">${dict[act].path}</a>`;
+        img.src = dict[act].img;
+        a.href = dict[act].url;
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Form submitted successfully!"
+          });
+    } catch (error) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "error",
+            title: "An error occurred while processing your request. Please try again later."
+          });
+    }
 }
 
 

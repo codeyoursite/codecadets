@@ -8,10 +8,14 @@ form.addEventListener("submit", (e) => {
     if (age < 7) {
         const url = `../young`;
         window.location.href = url;
-    } else if (age >= 5 && age <= 122) {
+    } else if (age >= 5 && age <= 18) {
         const url = `../second/index.html?${data.toString()}`;
         window.location.href = url;
     } else {
-        alert("Please enter a valid age!")
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please enter a valid age between 5 and 18."
+        });
     }
 });
