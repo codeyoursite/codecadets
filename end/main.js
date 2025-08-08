@@ -170,7 +170,11 @@ function change(act) {
         img.src = dict[act].img;
           
         if (isTouchDevice()) {
-            a.href = "";
+            const fragment = document.createDocumentFragment();
+            while (a.firstChild) {
+                fragment.appendChild(a.firstChild);
+            }
+            a.parentNode.replaceChild(fragment, a);
         } else {
             a.href = dict[act].url;
         }
