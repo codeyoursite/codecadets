@@ -2,11 +2,14 @@ body {
     background-color: #323232 !important;
     color: #f5f5f5 !important;
     padding: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-  @media (prefers-color-scheme: light) {
-    body {
+@media (prefers-color-scheme: light) {
+  body {
       background: #f5f5f5 !important;
       color: #323232 !important;
-    }
   }
+}
