@@ -158,13 +158,22 @@ if (points == 3) {
     }
 }
 
+function isTouchDevice() {
+    return 'ontouchstart' in window;
+}
+
 function change(act) {
     try {
         o = `The AI has chosen ${act} for you.`;
         let url = dict[act].url;
         txt.innerHTML = o + "<br>" + `Click <a href="${url}">here</a> for a link to the site or select any activity in <a href="${dict[act].purl}">${dict[act].path}</a>`;
         img.src = dict[act].img;
-        a.href = dict[act].url;
+          
+        if (isTouchDevice()) {
+            a.href = "";
+        } else {
+            a.href = dict[act].url;
+        }
         title.innerHTML = act;
         cdesc.innerHTML = dict[act].desc;
         const Toast = Swal.mixin({
