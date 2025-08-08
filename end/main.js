@@ -118,10 +118,10 @@ if (points == 3) {
     }
 } else if (points == 5) {
     if (level !== "1" && level !== "2") { // if they are great at coding
-        if (radio === "5") { // they have chose html and not js (they have already done it)
-            change("JavaScript");
-        } else {
+        if (radio === "5") { // they have chose js (they have already done it)
             change("HTML");
+        } else {
+            change("JavaScript");
         }
     } else {
         if (radio !== 3) { // if they didn't choose HTML
