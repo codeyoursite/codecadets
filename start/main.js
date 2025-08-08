@@ -5,7 +5,7 @@ form.addEventListener("submit", (e) => {
     const age = document.getElementById("floatingPassword").value;
     let data = new URLSearchParams();
     data.append("age", age);
-    if ((age <= 7) && (age >= 4)) {
+    if ((age <= 7) && (age > 4)) {
         const url = `../young`;
         window.location.href = url;
     } else if (age > 7 && age < 18) {
